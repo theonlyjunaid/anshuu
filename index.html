@@ -131,7 +131,7 @@
 </head>
 
 <body>
-    <div class="card" onclick="myFunction()">
+   <div class="card" onclick="myFunction2()">
         <div class="back"></div>
         <div class="front" onclick="myFunction()">
             <div class="imgset">
@@ -143,22 +143,19 @@
                 <source src="anshu.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
-            <!-- <p id="head">Happy Birthday </p>
-
-            <p>Birthdays come and go, everyone grows up a year every year, and gifts are opened and thrown. But I want
-                that my Birthday wishes stay with you forever. Happy Birthday!
-
-            </p>
-            <p>Always Remember there exist <a href="https://www.junaidmalik.com">Junaid</a> Who Can go to any Extent For
-                Your
-                Happines</p> -->
         </div>
     </div>
     <script>
         document.getElementById("myVideo").volume = 0;
         function myFunction() {
-            document.getElementById("myVideo").volume = 1;
-
+            if (document.getElementById("myVideo").volume === 1) {
+                document.getElementById("myVideo").volume = 0;
+            } else {
+                document.getElementById("myVideo").volume = 1
+            }
+        }
+        function myFunction2() {
+            document.getElementById("myVideo").volume = 0;
         }
     </script>
 </body>
