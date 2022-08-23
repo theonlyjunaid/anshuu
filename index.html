@@ -131,7 +131,7 @@
 </head>
 
 <body>
-   <div class="card" onclick="myFunctionn()">
+   <div class="card" onclick="myFunction()">
         <div class="back"></div>
         <div class="front" onclick="myFunction()">
             <div class="imgset">
@@ -146,14 +146,15 @@
         </div>
     </div>
     <script>
-        document.getElementById("myVideo").volume = 0;
+     document.getElementById("myVideo").volume = 0;
         function myFunction() {
-       
+            if (document.getElementById("myVideo").volume === 0) {
                 document.getElementById("myVideo").volume = 1
-            
-        }
-        function myFunctionn() {
-            document.getElementById("myVideo").volume = 0;
+
+            } else {
+                document.getElementById("myVideo").volume = 0;
+
+            }
         }
     </script>
 </body>
